@@ -6,6 +6,7 @@ const BNB_CHAIN_RPC_URL = "https://bsc-dataseed.binance.org/";
 
 const provider = new ethers.providers.JsonRpcBatchProvider(BNB_CHAIN_RPC_URL);
 
+// Wallet is initialized to perform write operation in contract
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
 const contract = new ethers.Contract(LLG_CONTRACT_ADDRESS, contractABI, wallet);
